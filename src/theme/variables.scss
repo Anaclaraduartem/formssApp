@@ -82,6 +82,12 @@
 	--ion-color-darkslateblue-shade: #9c74d8;
 	--ion-color-darkslateblue-tint: #b990f6;
 
+  --ion-color-roxinho: #f5e0ff;
+	--ion-color-roxinho-rgb: 245,224,255;
+	--ion-color-roxinho-contrast: #000000;
+	--ion-color-roxinho-contrast-rgb: 0,0,0;
+	--ion-color-roxinho-shade: #d8c5e0;
+	--ion-color-roxinho-tint: #f6e3ff;
 
 }
 
@@ -154,7 +160,11 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
+
   }
+
+
 
   /*
    * iOS Dark Theme
@@ -250,4 +260,14 @@
 	--ion-color-contrast-rgb: var(--ion-color-darkslateblue-contrast-rgb);
 	--ion-color-shade: var(--ion-color-darkslateblue-shade);
 	--ion-color-tint: var(--ion-color-darkslateblue-tint);
+}
+
+
+.ion-color-roxinho {
+  --ion-color-base: var(--ion-color-roxinho);
+  --ion-color-base-rgb: var(--ion-color-roxinho-rgb);
+  --ion-color-contrast: var(--ion-color-roxinho-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-roxinho-contrast-rgb);
+  --ion-color-shade: var(--ion-color-roxinho-shade);
+  --ion-color-tint: var(--ion-color-roxinho-tint);
 }
