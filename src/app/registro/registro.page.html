@@ -5,40 +5,45 @@
 </ion-header>
 
 <ion-content color="roxinho" >
+  <form [formGroup]="formRegistro">
 <ion-card>
   <ion-item>
-    <ion-input placeholder=" Ana Clara Duarte">Nome:</ion-input>
+    <ion-label position="floating">Nome:</ion-label>
+    <ion-input formControlName="nome"></ion-input>
   </ion-item>
 
   <ion-item>
 
-    <ion-input placeholder=" 111.111.111-11">CPF:</ion-input>
+    <ion-label position="floating">CPF:</ion-label>
+    <ion-input formControlName="cpf"></ion-input>
   </ion-item>
 
 
   <ion-item>
-    <ion-input placeholder=" coloque seu email "> Email: </ion-input>
+    <ion-label position="floating"> Email: </ion-label>
+    <ion-input formControlName="email"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input type="password">Senha:
+    <ion-label position="floating">Senha:</ion-label>
+    <ion-input type="password" formControlName="senha"></ion-input>
+  </ion-item>
 
-  </ion-input>
-  </ion-item>
   <ion-item>
-    <ion-input type="password">Confirmar Senha:
-  </ion-input>
+    <ion-label position="floating">Confirmar Senha:</ion-label>
+    <ion-input type ="password" formControlName="confirmaSenha"></ion-input>
   </ion-item>
+
 </ion-card>
   <div id="ion-button">
-    <ion-button shape="round" color="darkslateblue">Salvar</ion-button>
+    <ion-button shape="round"  (click)="salvarRegistro()" color="darkslateblue">Salvar</ion-button>
   </div>
-
+</form>
 </ion-content>
 
 
 <ion-card-header color="roxinho">
 
 
-<ion-button routerLink="/tabs"  expand="block"color="darkslateblue">Voltar</ion-button>
+<ion-button routerLink="/tabs"  expand="block" color="darkslateblue">Voltar</ion-button>
 </ion-card-header>

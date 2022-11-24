@@ -8,12 +8,19 @@ import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
 
+import { IonicStorageModule } from '@ionic/storage-angular';
+import { Drivers } from '@ionic/storage';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule
+    LoginPageRoutingModule,
+      IonicStorageModule.forRoot({
+        driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
+      })
+
   ],
   declarations: [LoginPage]
 })
