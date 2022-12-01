@@ -2,7 +2,7 @@ import { StorageService } from './../services/storage.service';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from './../models/Usuario';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -50,7 +50,7 @@ export class RegistroPage implements OnInit {
     ],
   };
 
-  constructor(private formBuilder: FormBuilder, private storageService: StorageService) {
+  constructor(private formBuilder: FormBuilder, private storageService: StorageService,private route: Router) {
     this.formRegistro = this.formBuilder.group({
       nome: [
         '',
@@ -86,6 +86,7 @@ export class RegistroPage implements OnInit {
     this.usuario.email = this.formRegistro.value.email;
     this.usuario.senha = this.formRegistro.value.senha;
     await this.storageService.set(this.usuario.email, this.usuario);
+    this.route.navigateByUrl('/tabs/tab2');
    } else{
      alert('Formulário Inválido!');
    }
