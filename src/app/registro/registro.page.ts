@@ -1,7 +1,8 @@
 import { StorageService } from './../services/storage.service';
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../models/Usuario';
+import { Usuario } from './../models/Usuario';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-registro',
