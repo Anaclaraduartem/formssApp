@@ -22,5 +22,8 @@ ionViewDidEnter(){
   this.buscarUsuarios();
 
 }
-
+async excluirRegistro(email: string){
+  await this.storageService.remove(email);
+  this.buscarUsuarios();
+}
 }

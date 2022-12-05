@@ -1,17 +1,18 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="darkslateblue">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/registro"></ion-back-button>
+      <ion-back-button defaultHref="/registro" color="light"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      Tab 2
+     Usuários
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content color="roxinho">
   <ion-item-sliding *ngFor="let user of listaUsuarios" >
-    <ion-item>
+    <ion-item color="roxinho">
+
       <ion-label>
         <div>
           <h1>{{user.nome}}</h1>
@@ -21,8 +22,8 @@
       </ion-label>
     </ion-item>
 
-    <ion-item-options side="end">
-      <ion-item-option color="danger">
+    <ion-item-options side="end" >
+      <ion-item-option color="danger" (click)="excluirRegistro(user.email)">
         <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
       </ion-item-option>
     </ion-item-options>
